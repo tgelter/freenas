@@ -96,9 +96,9 @@
           "yaxes": [
             {
               "format": "short",
-              "label": null,
+              "label": "",
               "logBase": 1,
-              "max": null,
+              "max": "10",
               "min": null,
               "show": true
             },
@@ -164,9 +164,9 @@
           "yaxes": [
             {
               "format": "decbytes",
-              "label": null,
+              "label": "",
               "logBase": 1,
-              "max": null,
+              "max": "17179869184",
               "min": null,
               "show": true
             },
@@ -308,10 +308,10 @@
           "yaxes": [
             {
               "format": "celsius",
-              "label": null,
+              "label": "",
               "logBase": 1,
-              "max": null,
-              "min": null,
+              "max": "65",
+              "min": "0",
               "show": true
             },
             {
@@ -360,7 +360,7 @@
           "points": false,
           "renderer": "flot",
           "seriesOverrides": [],
-          "span": 6,
+          "span": 3,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -416,10 +416,114 @@
           "yaxes": [
             {
               "format": "percent",
+              "label": "",
+              "logBase": 1,
+              "max": "100",
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
               "label": null,
               "logBase": 1,
               "max": null,
               "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "${DS_GUAPURANAS}",
+          "fill": 1,
+          "id": 11,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "refId": "A",
+              "target": "freenas_local.cputemp-0.*.*",
+              "textEditor": true
+            },
+            {
+              "refId": "B",
+              "target": "freenas_local.cputemp-1.*.*",
+              "textEditor": true
+            },
+            {
+              "refId": "C",
+              "target": "freenas_local.cputemp-2.*.*",
+              "textEditor": true
+            },
+            {
+              "refId": "D",
+              "target": "freenas_local.cputemp-3.*.*",
+              "textEditor": true
+            },
+            {
+              "refId": "E",
+              "target": "freenas_local.cputemp-4.*.*",
+              "textEditor": true
+            },
+            {
+              "refId": "F",
+              "target": "freenas_local.cputemp-5.*.*",
+              "textEditor": true
+            },
+            {
+              "refId": "G",
+              "target": "freenas_local.cputemp-6.*.*",
+              "textEditor": true
+            },
+            {
+              "refId": "H",
+              "target": "freenas_local.cputemp-7.*.*",
+              "textEditor": true
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "CPU Temp",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": "",
+              "logBase": 1,
+              "max": "3600",
+              "min": "3025",
               "show": true
             },
             {
@@ -576,9 +680,9 @@
           "yaxes": [
             {
               "format": "percent",
-              "label": null,
+              "label": "",
               "logBase": 1,
-              "max": null,
+              "max": "100",
               "min": null,
               "show": true
             },
@@ -811,17 +915,6 @@
       "showTitle": false,
       "title": "Dashboard Row",
       "titleSize": "h6"
-    },
-    {
-      "collapse": false,
-      "height": 250,
-      "panels": [],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": false,
-      "title": "Dashboard Row",
-      "titleSize": "h6"
     }
   ],
   "schemaVersion": 14,
@@ -831,8 +924,8 @@
     "list": []
   },
   "time": {
-    "from": "now-30m",
-    "to": "now"
+    "from": "now-1w/w",
+    "to": "now-1w/w"
   },
   "timepicker": {
     "refresh_intervals": [
@@ -861,5 +954,5 @@
   },
   "timezone": "browser",
   "title": "guapuraNAS",
-  "version": 7
+  "version": 20
 }
